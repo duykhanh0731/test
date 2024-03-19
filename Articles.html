@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Add this line to include padding and border in element's total width and height */
+        }
+
+        /* Basic styles for the website */
+        body {
+            font-family: sans-serif;
+            background-color: #333;
+        }
+
+        /* Menu styles */
+        #menu ul {
+            background: black;
+            list-style-type: none;
+            text-align: left;
+        }
+
+        #menu li {
+            color: #f1f1f1;
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: -5px;
+            position: relative;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            width:120px;
+            margin-left: 2px;
+            text-align: center;
+        }
+
+        #menu a:hover {
+            background: #F1F1F1;
+            color: #333;
+            width:120px;
+        }
+
+        /* Dropdown Menu */
+        .sub-menu {
+            display: none;
+            position: absolute;
+            width: 110px; /* Adjust the width as needed */
+        }
+
+        #menu li:hover .sub-menu {
+            display: block;
+        }
+
+        .sub-menu li {
+            display: block;
+            color: red;
+        }
+
+        .sub-menu a {
+            color: #fff;
+        }
+
+        .sub-menu a:hover {
+            background: #F1F1F1;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li>
+            <a href="#">Articles</a>
+            <ul class="sub-menu">
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a>
+            </ul>
+        </li>
+        <li> <a href="#" >Forums</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</div>
+</body>
+</html>

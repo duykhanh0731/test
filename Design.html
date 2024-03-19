@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>design</title>
+
+</head>
+<style>
+    /* Cấu hình chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color:red;
+    
+    text-align: center;
+    padding: 10px;
+}
+
+/* Menu */
+nav {
+    background-color: yellow;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+/* Nội dung */
+main {
+    display: flex;
+    height: 400px;
+}
+
+.noi-dung-trai {
+    text-align: center;
+    background-color: purple;
+    width: 20%;
+    padding: 10px;
+}
+
+.noi-dung-giua {
+    background-color: yellow;
+    text-align: center;
+    width: 60%;
+    padding: 10px;
+}
+
+.noi-dung-phai {
+    background-color: green;
+    text-align: center;
+    width: 20%;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: yellow;
+    text-align: center;
+    padding: 10px;
+}
+
+</style>
+<body>
+    <header>
+        <h1>HEAD</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><h2>MENU</h2></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section class="noi-dung-trai">
+            <h2>LEFT</h2>
+        </section>
+        <section class="noi-dung-giua">
+            <h2>CENTER</h2>
+        </section>
+        <section class="noi-dung-phai">
+            <h2>RIGHT</h2>
+        </section>
+    </main>
+    <footer>
+        <h2> FOOTER</h2>
+    </footer>
+</body>
+</html>
