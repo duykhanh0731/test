@@ -1,98 +1,142 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Articles</title>
     <style>
-        /* Reset CSS */
-        * {
+        /*==Reset CSS==*/
+        *{
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Add this line to include padding and border in element's total width and height */
         }
-
-        /* Basic styles for the website */
+        /*==Style cơ bản cho website==*/
         body {
-            font-family: sans-serif;
-            background-color: #333;
+            font-family: 'Times New Roman', Times, serif;
         }
-
-        /* Menu styles */
-        #menu ul {
-            background: black;
+        /*==Style cho menu===*/
+        #menu ul.tt {
+            background: #231b07ec;
             list-style-type: none;
-            text-align: left;
         }
-
+        #menu ul li a {
+            padding-left: 10px;
+        }
+        #menu ul.sub-menu, #menu ul.sub-menu1,#menu ul.sub-menu2  {
+            background-color: rgba(144, 144, 144, 0.771);;
+        }
         #menu li {
             color: #f1f1f1;
             display: inline-block;
             width: 120px;
             height: 40px;
             line-height: 40px;
-            margin-left: -5px;
             position: relative;
         }
-
         #menu a {
             text-decoration: none;
             color: #fff;
-            display: block;
-            width:120px;
-            margin-left: 2px;
+            display: block; 
+            
+        }
+        a.it {
             text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, 0.767);
         }
-
-        #menu a:hover {
-            background: #F1F1F1;
-            color: #333;
-            width:120px;
+        a.it:hover {
+            background: #98650d;
+            color: #000000;
         }
-
-        /* Dropdown Menu */
+        /*-Dropdown Menu==*/ 
         .sub-menu {
             display: none;
             position: absolute;
-            width: 110px; /* Adjust the width as needed */
+            width: 220px; 
+            color: white;
+            background-color: rgba(167, 166, 166, 0.771);
         }
-
+        #menu .sub-menu a:hover {
+            background: #d18e1b;
+            color: #000000;
+            width: 210px;
+        }
         #menu li:hover .sub-menu {
             display: block;
         }
-
         .sub-menu li {
+            color: white;
+            background-color: rgba(167, 166, 166, 0.771);
+            width: 220px;
+        }
+        .sub-menu1 li {
             display: block;
-            color: red;
+        }
+        .sub-menu2 li {
+            display: block;
+            color: white;
+            background-color: rgba(167, 166, 166, 0.771);
+            width: 220px;
+        }
+        /* Ẩn các submenu mặc định */
+        .sub-menu1, .sub-menu2 {
+            display: none;
+            position: absolute;
+            width: 220px; 
+            left: 220px;
+            top: 0;
         }
 
-        .sub-menu a {
-            color: #fff;
+        /* Hiển thị submenu1 khi rê chuột vào menu đa tầng 3 */
+        #menu li:nth-child(3) :hover.sub-menu1 {
+            display: block;
         }
 
-        .sub-menu a:hover {
-            background: #F1F1F1;
-            color: #333;
+        /* Hiển thị submenu2 khi rê chuột vào menu đa tầng 8 */
+        #menu li:nth-child(3) ul li:nth-child(5):hover .sub-menu2 {
+            display: block;
+        }
+
+        /* Ẩn các submenu khi rê chuột vào mục khác */
+        #menu li:not(:nth-child(3)):hover .sub-menu1,
+        #menu li:not(:nth-child(3)) ul li:nth-child(5):hover .sub-menu2 {
+            display: none;
         }
     </style>
 </head>
 <body>
-<div id="menu">
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li>
-            <a href="#">Articles</a>
-            <ul class="sub-menu">
-                <li><a href="#">Menu 1</a></li>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 3</a>
-            </ul>
-        </li>
-        <li> <a href="#" >Forums</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
-</div>
+    <div id="menu">
+        <ul class="tt">
+            <li><a class="it" href="#home">Home</a></li>
+            <li><a class="it" href="#news">News</a></li>
+            <li>
+                <a class="it" href="#articles">Articles</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Menu đa tầng 1</a></li>
+                    <li><a href="#">Menu đa tầng 2</a></li>
+                    <li>
+                        <a href="#">Menu đa tầng 3</a>
+                        <ul class="sub-menu1">
+                            <li><a href="#">Menu đa tầng 4</a></li>
+                            <li><a href="#">Menu đa tầng 5</a></li>
+                            <li><a href="#">Menu đa tầng 6</a></li>
+                            <li><a href="#">Menu đa tầng 7</a></li>
+                            <li>
+                                <a href="#">Menu đa tầng 8</a>
+                                <ul class="sub-menu2">
+                                    <li><a href="#">Menu đa tầng 9</a></li>
+                                    <li><a href="#">Menu đa tầng 10</a></li>
+                                    <li><a href="#">Menu đa tầng 11</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a class="it" href="#forums">Forums</a></li>
+            <li><a class="it" href="#contact">Contact</a></li>
+            <li><a class="it" href="#about">About</a></li>
+        </ul>
+    </div>
 </body>
 </html>
